@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xlms:th="http://www.thymeleaf.org">
+	<head>
+		<title>Site com Spring</title>
+	</head>
+	<body>
+		<table border>
+			<thead>
+				<tr>
+					<th>Id</th>
+					<th>Nome</th>
+					<th>Email</th>
+					<th>Tipo</th>
+					<th colspan="2">Ações</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="usuario: ${usuarios}">
+					<td th:text="${usuario.id}"></td>
+					<td th:text="${usuario.nome}"></td>
+					<td th:text="${usuario.email}"></td>
+					<td th:text="${usuario.tipo}"></td>
+					<td><a th:href="@{/usuario/editar/{id}(id=${usuario.id})}">
+					Editar</a></td>
+					<td><a th:href="@{/usuario/excluir/{id}(id=${usuario.id})}">
+					Excluir</a></td>
+				</tr>
+			</tbody>
+		</table>
+	</body>
+</html>

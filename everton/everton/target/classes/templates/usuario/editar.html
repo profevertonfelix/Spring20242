@@ -1,0 +1,21 @@
+<html xlms:th="http://www.thymeleaf.org">
+<head></head>
+<body>
+<h2>Editar usuários</h2>
+<form method="post">
+	<label for="nome">Nome:</label>
+	<input type="text" name="nome" id="nome" th:value="${nome}"/>
+	<br />
+	<label for="email">Email:</label>
+	<input type="email" name="email" id="email" th:value="${email}"/>
+	<br />
+	<label for="senha">Senha:</label>
+	<input type="password" name="senha" id="senha" th:value="${senha}"/>
+	<br />
+	<label for="tipo">Tipo:</label>
+	<input type="text" name="tipo" id="tipo" th:value="${tipo}"/>
+	<br />
+	<button type="submit">Enviar</button>
+</form>
+</body>
+</html>
